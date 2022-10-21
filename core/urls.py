@@ -1,10 +1,10 @@
+from turtle import home
 from django.contrib import admin
 from django.urls import path
 from django.http import HttpResponse
-def main(request):
-    return HttpResponse("<h1> Hello World </h1>")
+from my_app.views import home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', main)
+    path('', home)
 ]
